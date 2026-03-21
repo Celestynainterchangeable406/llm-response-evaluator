@@ -54,6 +54,9 @@ The app will open at `http://localhost:8501`
 
 ---
 
+## 🌐 Live Demo
+👉 [Try it here](https://llm-response-evaluator.streamlit.app)
+
 ## 🖥️ How to Use
 
 1. Paste your **prompt** in the input field
